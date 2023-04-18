@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { Authenticator } from '@aws-amplify/ui-react';
 
 import NxWelcome from './nx-welcome';
 
@@ -9,7 +10,10 @@ const StyledApp = styled.div`
 export function App() {
   return (
     <StyledApp>
-      <NxWelcome title="test-nx-15" />
+      <Authenticator.Provider>
+        <NxWelcome title="test-nx-15" />
+
+      </Authenticator.Provider>
     </StyledApp>
   );
 }
